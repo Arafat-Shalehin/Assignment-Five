@@ -9,6 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!--fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
@@ -106,6 +111,68 @@
             </p>
 
         </div>
+    </section>
+
+    <!--Main Section-->
+
+    <section class="bg-[#F5FFF6]">
+
+        <div class="border-2 border-red-600 sm:py-10 sm:px-10 py-4 px-4">
+
+            <div class="
+            sm:h-[300px] sm:w-[400px] border-white rounded-2xl 
+            bg-white drop-shadow-xl
+            ">
+            
+                <div class="ml-7 mt-2 sm:py-3">
+
+                    <div class="flex justify-between">
+
+                        <div class="bg-[#FFE3E2] w-[80px] h-[60px] rounded-3xl flex justify-center">
+
+                            <img class="w-[55px] py-2 px-2" src="assets/emergency.png" alt="">
+
+                        </div>
+
+                        <i id="favourite-btn" class="fa-regular fa-heart text-3xl mt-3 mr-8"></i>
+
+                    </div>
+
+                    <h3 class="
+                    font-bold mt-3
+                    ">National Emergency Number</h3>
+
+                    <p class="
+                    text-[#8C8C8C]
+                    ">National Emergency</p>
+
+                    <p class="
+                    font-bold text-3xl mt-3
+                    ">999</p>
+
+                    <div class="*
+                    bg-[#8C8C8C] rounded-3xl w-[50px] font-bold text-center mt-2 -mb-1
+                    ">All</div>
+                </div>
+
+                <div class="sm:mt-2 mt-4 mb-4 sm:py-3 text-center flex justify-evenly">
+
+                    <button id="copy-btn" class="
+                    btn w-[160px] text-[#8C8C8C] rounded-xl
+                    "><i class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+
+                    <button id="call-btn" class="
+                    btn w-[160px] text-white bg-green-600 rounded-xl 
+                    "><i class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!--JS File-->
