@@ -610,29 +610,52 @@
 
             </div>
 
-                <!--History Section-->
-
             <!--History Section-->
 
             <div class="sm:mt-10 sm:w-[600px]">
                 <div class="
-                sm:w-full bg-white border-white drop-shadow-xl flex items-center justify-between p-6 sm:rounded-2xl rounded-full
+                sm:w-full bg-white border-white drop-shadow-xl flex flex-col p-6 sm:rounded-2xl rounded-2xl
                 ">
                     
-                    <div class="flex items-center gap-2">
+                <!--Headline or Call History-->
+                    <div class="flex items-center justify-between gap-2">
 
+                       <div class="flex items-center gap-2">
                         <i class="fa-regular fa-clock text-2xl text-[#8C8C8C]"></i>
+                        
                         <h2 class="
-                        font-bold text-xl
-                        ">Call History</h2>
+                            font-bold text-xl
+                        ">Call History
+                       </h2>
+                       </div>
+                        
+                        <div>
+                            <button id="clear-btn" class="
+                                text-white font-semibold text-xl bg-green-600 w-[120px] h-[50px] rounded-3xl 
+                                ">Clear
+                            </button>
+                        </div>
 
                     </div>
 
-                    <button id="clear-btn" class="
-                    text-white font-semibold text-xl bg-green-600 w-[120px] h-[50px] rounded-3xl
-                    ">Clear</button>
+                <!--Each Call History Design-->
+                    <div class="
+
+                    bg-[#e9e8e8] sm:w-[500px] sm:h-[80px] w-[320px]
+                    mx-auto rounded-xl sm:mt-5 mt-3
+                    flex justify-between items-center
+                    ">
+                        <div class="p-2 sm:p-9">
+                            <h2 class="font-bold mt-3 text-xl">Fire Service Number</h2>
+                            <p class="text-[#8C8C8C] text-xl">999</p>
+                        </div>
+
+                        <p class="text-lg p-2 sm:p-9">date</p>
+
+                    </div>
 
                 </div>
+
             </div>
         </div>
 
