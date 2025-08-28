@@ -1,5 +1,7 @@
 const callBtnData = [];
 
+let copyCount = 0;
+
 // Reuaseble Code with call and coin functionalities
 
 function validCallCheck (title, num) {
@@ -40,7 +42,7 @@ function makeCallHistory () {
 
     const callHistoryContainer = document.getElementById("call-history-card-container");
 
-    callHistoryContainer.innerText = "";
+    callHistoryContainer.innerHTML = "";
 
     for(data of callBtnData) {
         const div = document.createElement("div")
@@ -63,9 +65,32 @@ function makeCallHistory () {
         `
 
         callHistoryContainer.appendChild(div);
+
     }
 
 };
+
+
+// Reusable code for Copy button
+
+function copyCountCode (id) {
+
+    const num = document.getElementById(id);
+
+    let value = num.innerText;
+    console.log(value);
+
+    navigator.clipboard.writeText(value);
+
+    const copyTitle = document.getElementById("copy-num"); 
+
+    copyCount++
+
+    copyTitle.innerText = copyCount;
+
+    alert("Number is Copied.");
+
+}
 
 
 // Heart Section Functionalities.
@@ -88,7 +113,19 @@ for (const btns of fabBtn) {
 };
 
 
-// Call and Coin Functionalities
+// Clear, Copy(Func call), Call and Coin Functionalities
+
+document.getElementById("clear-btn").addEventListener("click", function () {
+
+    const callHistoryContainer = document.getElementById("call-history-card-container");
+
+    callHistoryContainer.innerHTML = "";
+
+    callBtnData.length = 0;
+
+});
+
+
 
 document.getElementById("national-call-btn").addEventListener("click", function () {
 
@@ -98,6 +135,13 @@ document.getElementById("national-call-btn").addEventListener("click", function 
 
 });
 
+document.getElementById("national-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("national-num");
+
+});
+
+
 document.getElementById("police-call-btn").addEventListener("click", function () {
 
     validCallCheck("police-title", "police-num");
@@ -106,11 +150,24 @@ document.getElementById("police-call-btn").addEventListener("click", function ()
 
 });
 
+document.getElementById("police-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("police-num");
+
+});
+
+
 document.getElementById("fire-call-btn").addEventListener("click", function () {
 
     validCallCheck("fire-title", "fire-num");
 
     makeCallHistory();
+
+});
+
+document.getElementById("fire-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("fire-num");
 
 });
 
@@ -123,6 +180,13 @@ document.getElementById("ambulance-call-btn").addEventListener("click", function
 
 });
 
+document.getElementById("ambu-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("ambulance-num");
+
+});
+
+
 document.getElementById("women-call-btn").addEventListener("click", function () {
 
     validCallCheck("women-title", "women-num");
@@ -131,11 +195,24 @@ document.getElementById("women-call-btn").addEventListener("click", function () 
 
 });
 
+document.getElementById("women-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("women-num");
+
+});
+
+
 document.getElementById("anti-call-btn").addEventListener("click", function () {
 
     validCallCheck("anti-title", "anti-num");
 
     makeCallHistory();
+
+});
+
+document.getElementById("anti-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("anti-num");
 
 });
 
@@ -148,6 +225,13 @@ document.getElementById("ele-call-btn").addEventListener("click", function () {
 
 });
 
+document.getElementById("ele-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("ele-num");
+
+});
+
+
 document.getElementById("brac-call-btn").addEventListener("click", function () {
 
     validCallCheck("brac-title", "brac-num");
@@ -156,10 +240,23 @@ document.getElementById("brac-call-btn").addEventListener("click", function () {
 
 });
 
+document.getElementById("brac-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("brac-num");
+
+});
+
+
 document.getElementById("bdr-call-btn").addEventListener("click", function () {
 
     validCallCheck("bdr-title", "bdr-num");
 
     makeCallHistory();
+
+});
+
+document.getElementById("bdr-copy-btn").addEventListener("click", function () {
+
+    copyCountCode("bdr-num");
 
 });
