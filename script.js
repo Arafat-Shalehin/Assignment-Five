@@ -78,7 +78,6 @@ function copyCountCode (id) {
     const num = document.getElementById(id);
 
     let value = num.innerText;
-    console.log(value);
 
     navigator.clipboard.writeText(value);
 
@@ -88,7 +87,7 @@ function copyCountCode (id) {
 
     copyTitle.innerText = copyCount;
 
-    alert("Number is Copied.");
+    alert(`Number is Copied.\n ${value}`);
 
 }
 
